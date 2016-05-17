@@ -30,4 +30,4 @@ $wc = New-Object Net.WebClient
 $wc.Headers['Content-type'] = 'application/octet-stream'
 $wc.Headers['Authorization'] = "token $token"
 $response = $wc.UploadData($uploadUrl, "POST", $data)
-Write-Host "OK" -ForegroundColor Green
+#Write-Host "OK" -ForegroundColor Green
