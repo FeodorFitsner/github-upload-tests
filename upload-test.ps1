@@ -19,7 +19,7 @@ $body = @{
 
 Write-Host "Creating release..." -NoNewline
 $json = (ConvertTo-Json $body)
-$release = Invoke-RestMethod -Uri 'https://api.github.com/repos/' + $repo + '/releases' -Headers $headers -Method POST -Body $json
+$release = Invoke-RestMethod -Uri "https://api.github.com/repos/$repo/releases" -Headers $headers -Method POST -Body $json
 $uploadUrl = $release.upload_url.Replace("{?name,label}", "") + "?name=" + [IO.Path]::GetFileName($uploadFilePath)
 Write-Host "OK" -ForegroundColor Green
 
