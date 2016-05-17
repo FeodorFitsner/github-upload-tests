@@ -1,3 +1,5 @@
+image: Visual Studio 2015
+
 environment:
   gh_token:
     secure: ric7MEmy9qZvOydddBQJj74iuVbmxYF6ZpCmbfF2NOlOO+veMfzwQxjUf08htUYb
