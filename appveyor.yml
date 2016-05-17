@@ -1,4 +1,4 @@
-image: Visual Studio 2015
+image: Visual Studio 2015 - GCE
 
 version: '1.2.{build}'
 
