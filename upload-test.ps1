@@ -1,6 +1,7 @@
 $token = $env:gh_token
 $uploadFilePath = "$env:appveyor_build_folder\test.zip"
 $releaseName = "v$env:appveyor_build_version"
+$repo = 'FeodorFitsner/github-upload-tests'
 
 $headers = @{
   "Authorization" = "token $token"
@@ -18,7 +19,7 @@ $body = @{
 
 Write-Host "Creating release..." -NoNewline
 $json = (ConvertTo-Json $body)
-$release = Invoke-RestMethod -Uri 'https://api.github.com/repos/FeodorFitsner/aaa1/releases' -Headers $headers -Method POST -Body $json
+$release = Invoke-RestMethod -Uri 'https://api.github.com/repos/' + $repo + '/releases' -Headers $headers -Method POST -Body $json
 $uploadUrl = $release.upload_url.Replace("{?name,label}", "") + "?name=" + [IO.Path]::GetFileName($uploadFilePath)
 Write-Host "OK" -ForegroundColor Green
 
