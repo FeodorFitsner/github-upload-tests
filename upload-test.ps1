@@ -1,5 +1,5 @@
 $token = $env:gh_token
-$uploadFilePath = "$env:appveyor_build_folder\node.zip"
+$uploadFilePath = "$env:appveyor_build_folder\test.zip"
 $releaseName = "v$env:appveyor_build_version"
 
 $headers = @{
