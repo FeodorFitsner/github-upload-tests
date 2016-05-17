@@ -4,6 +4,8 @@ environment:
   gh_token:
     secure: ric7MEmy9qZvOydddBQJj74iuVbmxYF6ZpCmbfF2NOlOO+veMfzwQxjUf08htUYb
 
+skip_tags: true
+
 build: off
 
 test_script:
